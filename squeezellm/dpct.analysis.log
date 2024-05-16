@@ -1,0 +1,15 @@
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:
+  + 43 lines of code (100%) will be automatically migrated.
+    -  8 APIs/Types - No manual effort.
+    - 21 APIs/Types - Low manual effort for checking and code fixing.
+    - 14 APIs/Types - Medium manual effort for code fixing.
+  +  0 lines of code (  0%) will not be automatically migrated.
+    -  0 APIs/Types - High manual effort for code fixing.
+Total Project:
+  + 43 lines of code (100%) will be automatically migrated.
+    -  8 APIs/Types - No manual effort.
+    - 21 APIs/Types - Low manual effort for checking and code fixing.
+    - 14 APIs/Types - Medium manual effort for code fixing.
+  +  0 lines of code (  0%) will not be automatically migrated.
+    -  0 APIs/Types - High manual effort for code fixing.
+See https://www.intel.com/content/www/us/en/docs/dpcpp-compatibility-tool/developer-guide-reference/current/overview.html for more details.

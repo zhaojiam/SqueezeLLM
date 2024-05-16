@@ -1,0 +1,135 @@
+error: unknown argument: '--generate-dependencies-with-compile'
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:263:7: warning: DPCT1038:0: When the kernel function name is used as a macro argument, the migration result may be incorrect. You need to verify the definition of the macro.
+  263 |       SPMV_ATOMIC<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:263:7: warning: DPCT1049:1: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.
+  263 |       SPMV_ATOMIC<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:309:7: warning: DPCT1038:2: When the kernel function name is used as a macro argument, the migration result may be incorrect. You need to verify the definition of the macro.
+  309 |       SPMV_ATOMIC<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:309:7: warning: DPCT1049:3: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.
+  309 |       SPMV_ATOMIC<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:369:7: warning: DPCT1038:4: When the kernel function name is used as a macro argument, the migration result may be incorrect. You need to verify the definition of the macro.
+  369 |       SPMV_ATOMIC_BATCHED<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:369:7: warning: DPCT1049:5: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.
+  369 |       SPMV_ATOMIC_BATCHED<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:423:7: warning: DPCT1038:6: When the kernel function name is used as a macro argument, the migration result may be incorrect. You need to verify the definition of the macro.
+  423 |       SPMV_ATOMIC_BATCHED<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:423:7: warning: DPCT1049:7: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.
+  423 |       SPMV_ATOMIC_BATCHED<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:476:7: warning: DPCT1038:8: When the kernel function name is used as a macro argument, the migration result may be incorrect. You need to verify the definition of the macro.
+  476 |       SPMV_ATOMIC<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:476:7: warning: DPCT1049:9: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.
+  476 |       SPMV_ATOMIC<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:547:7: warning: DPCT1038:10: When the kernel function name is used as a macro argument, the migration result may be incorrect. You need to verify the definition of the macro.
+  547 |       SPMV_ATOMIC<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:547:7: warning: DPCT1049:11: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.
+  547 |       SPMV_ATOMIC<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:620:7: warning: DPCT1038:12: When the kernel function name is used as a macro argument, the migration result may be incorrect. You need to verify the definition of the macro.
+  620 |       SPMV_ATOMIC_BATCHED<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:620:7: warning: DPCT1049:13: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.
+  620 |       SPMV_ATOMIC_BATCHED<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:701:7: warning: DPCT1038:14: When the kernel function name is used as a macro argument, the migration result may be incorrect. You need to verify the definition of the macro.
+  701 |       SPMV_ATOMIC_BATCHED<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:701:7: warning: DPCT1049:15: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.
+  701 |       SPMV_ATOMIC_BATCHED<<<num_blocks, block_size>>>(
+      |       ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:922:5: warning: DPCT1118:16: SYCL group functions and algorithms must be encountered in converged control flow. You may need to adjust the code.
+  922 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:924:5: warning: DPCT1118:17: SYCL group functions and algorithms must be encountered in converged control flow. You may need to adjust the code.
+  924 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1016:5: warning: DPCT1118:18: SYCL group functions and algorithms must be encountered in converged control flow. You may need to adjust the code.
+ 1016 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1018:5: warning: DPCT1118:19: SYCL group functions and algorithms must be encountered in converged control flow. You may need to adjust the code.
+ 1018 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1149:5: warning: DPCT1118:20: SYCL group functions and algorithms must be encountered in converged control flow. You may need to adjust the code.
+ 1149 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1151:5: warning: DPCT1118:21: SYCL group functions and algorithms must be encountered in converged control flow. You may need to adjust the code.
+ 1151 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:774:3: warning: DPCT1065:22: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+  774 |   __syncthreads();
+      |   ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:855:3: warning: DPCT1065:23: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+  855 |   __syncthreads();
+      |   ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:922:5: warning: DPCT1065:24: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+  922 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:924:5: warning: DPCT1065:25: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+  924 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1016:5: warning: DPCT1065:26: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+ 1016 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1018:5: warning: DPCT1065:27: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+ 1018 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1107:3: warning: DPCT1065:28: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+ 1107 |   __syncthreads();
+      |   ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1149:5: warning: DPCT1065:29: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+ 1149 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1151:5: warning: DPCT1065:30: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.
+ 1151 |     __syncthreads();
+      |     ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:753:20: warning: DPCT1101:31: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+  753 |   __shared__ float blockvec[BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:757:20: warning: DPCT1101:32: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+  757 |   __shared__ float deq2[8][BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:843:20: warning: DPCT1101:33: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+  843 |   __shared__ float blockvec[BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:847:20: warning: DPCT1101:34: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+  847 |   __shared__ float deq2[16][BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:898:20: warning: DPCT1101:35: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+  898 |   __shared__ float blockvec[BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:900:20: warning: DPCT1101:36: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+  900 |   __shared__ float deq2[8][BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:995:20: warning: DPCT1101:37: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+  995 |   __shared__ float blockvec[BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:998:20: warning: DPCT1101:38: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+  998 |   __shared__ float deq2[16][BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1104:20: warning: DPCT1101:49: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+ 1104 |   __shared__ float blockvec[BLOCKWIDTH];
+      |                    ^
+/export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu:1142:20: warning: DPCT1101:55: 'BLOCKWIDTH' expression was replaced with a value. Modify the code to use the original expression, provided in comments, if it is correct.
+ 1142 |   __shared__ float blockvec[BLOCKWIDTH];
+      |                    ^
+
+Parsing: /export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu
+Parsing: /export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda.cpp
+Analyzing: /export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu
+Analyzing: /export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda.cpp
+Migrating: /export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda_kernel.cu
+Migrating: /export/users/zhaojiam/proj/SqueezeLLM/squeezellm/quant_cuda.cpp
+Processed 1 file(s) in -in-root folder "/export/users/zhaojiam/proj/SqueezeLLM/squeezellm"
+
+See Diagnostics Reference to resolve warnings and complete the migration:
+https://www.intel.com/content/www/us/en/docs/dpcpp-compatibility-tool/developer-guide-reference/current/diagnostics-reference.html

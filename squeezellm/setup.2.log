@@ -1,0 +1,95 @@
+/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/extension.py:134: UserWarning: Unknown Extension options: 'extra_link_flags'
+  warnings.warn(msg)
+running install
+/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/cmd.py:66: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running bdist_egg
+running egg_info
+writing quant_cuda.egg-info/PKG-INFO
+writing dependency_links to quant_cuda.egg-info/dependency_links.txt
+writing top-level names to quant_cuda.egg-info/top_level.txt
+reading manifest file 'quant_cuda.egg-info/SOURCES.txt'
+writing manifest file 'quant_cuda.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_ext
+Traceback (most recent call last):
+  File "/export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/setup_cuda.py", line 4, in <module>
+    setup(
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/__init__.py", line 104, in setup
+    return distutils.core.setup(**attrs)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 184, in setup
+    return run_commands(dist)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 200, in run_commands
+    dist.run_commands()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+    self.run_command(cmd)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/command/install.py", line 87, in run
+    self.do_egg_install()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/command/install.py", line 139, in do_egg_install
+    self.run_command('bdist_egg')
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+    self.distribution.run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/command/bdist_egg.py", line 167, in run
+    cmd = self.call_command('install_lib', warn_dir=0)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/command/bdist_egg.py", line 153, in call_command
+    self.run_command(cmdname)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+    self.distribution.run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/command/install_lib.py", line 11, in run
+    self.build()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/command/install_lib.py", line 110, in build
+    self.run_command('build_ext')
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+    self.distribution.run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/command/build_ext.py", line 91, in run
+    _build_ext.run(self)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 359, in run
+    self.build_extensions()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 508, in build_extensions
+    compiler_name, compiler_version = self._check_abi()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 894, in _check_abi
+    _, version = get_compiler_abi_compatibility_and_version(compiler)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 387, in get_compiler_abi_compatibility_and_version
+    if tuple(map(int, version)) >= minimum_required_version:
+ValueError: invalid literal for int() with base 10: '0git'

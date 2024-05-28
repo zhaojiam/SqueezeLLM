@@ -4,8 +4,8 @@
 #include <torch/python.h>
 
 // half-tensor
-#include <c10/cuda/CUDAStream.h>
-#include <ATen/cuda/CUDATensorMethods.cuh>
+// #include <c10/cuda/CUDAStream.h>
+// #include <ATen/cuda/CUDATensorMethods.cuh>
 
 // atomicAdd for double-precision floating-point numbers on hardware with
 // compute capability < 6.0 from:

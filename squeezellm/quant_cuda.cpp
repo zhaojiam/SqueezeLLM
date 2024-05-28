@@ -1,6 +1,6 @@
 #include <torch/all.h>
 #include <torch/python.h>
-#include <c10/cuda/CUDAGuard.h>
+// #include <c10/cuda/CUDAGuard.h>
 
 void vecquant3matmul_nuq_perchannel_cuda(
   torch::Tensor vec, torch::Tensor mat, torch::Tensor mul,

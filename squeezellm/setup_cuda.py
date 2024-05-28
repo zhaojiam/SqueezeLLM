@@ -1,15 +1,15 @@
 from setuptools import Extension, setup
 from torch.utils import cpp_extension
+import intel_extension_for_pytorch as ipex
+from intel_extension_for_pytorch.xpu.cpp_extension import DPCPPExtension, DpcppBuildExtension
 
 setup(
     name="quant_cuda",
     ext_modules=[
-        cpp_extension.CUDAExtension(
+        DPCPPExtension(
             "quant_cuda", ["quant_cuda.cpp", "quant_cuda_kernel.dp.cpp"],
-            # extra_compile_args=['-fsycl', '-fsycl-targets=nvptx64-nvidia-cuda'],
-            extra_compile_args=['-fsycl'],
-            extra_link_flags=['']
+            include_dirs=ipex.xpu.cpp_extension.include_paths(),
         )
     ],
-    cmdclass={"build_ext": cpp_extension.BuildExtension},
+    cmdclass={"build_ext": DpcppBuildExtension},
 )

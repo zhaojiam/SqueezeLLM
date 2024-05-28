@@ -113,28 +113,28 @@ void vecquant3matmul_nuq_perchannel(
   torch::Tensor vec, torch::Tensor mat, torch::Tensor mul,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant3matmul_nuq_perchannel_cuda(vec, mat, mul, lookup_table);
 }
 void vecquant4matmul_nuq_perchannel(
   torch::Tensor vec, torch::Tensor mat, torch::Tensor mul,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant4matmul_nuq_perchannel_cuda(vec, mat, mul, lookup_table);
 }
 void vecquant3matmul_nuq_perchannel_batched(
   torch::Tensor vec, torch::Tensor mat, torch::Tensor mul,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant3matmul_nuq_perchannel_batched_cuda(vec, mat, mul, lookup_table);
 }
 void vecquant4matmul_nuq_perchannel_batched(
   torch::Tensor vec, torch::Tensor mat, torch::Tensor mul,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant4matmul_nuq_perchannel_batched_cuda(vec, mat, mul, lookup_table);
 }
 
@@ -148,7 +148,7 @@ void vecquant3matmul_spmv_nuq_perchannel(
   torch::Tensor mat3,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant3matmul_spmv_nuq_perchannel_cuda(rows, cols, mat, vec, mul, num_rows, mat3, lookup_table);
 }
 void vecquant4matmul_spmv_nuq_perchannel(
@@ -161,7 +161,7 @@ void vecquant4matmul_spmv_nuq_perchannel(
   torch::Tensor mat4,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant4matmul_spmv_nuq_perchannel_cuda(rows, cols, mat, vec, mul, num_rows, mat4, lookup_table);
 }
 
@@ -175,7 +175,7 @@ void vecquant3matmul_spmv_nuq_perchannel_batched(
   torch::Tensor mat3,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant3matmul_spmv_nuq_perchannel_batched_cuda(rows, cols, mat, vec, mul, num_rows, mat3, lookup_table);
 }
 void vecquant4matmul_spmv_nuq_perchannel_batched(
@@ -188,7 +188,7 @@ void vecquant4matmul_spmv_nuq_perchannel_batched(
   torch::Tensor mat4,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant4matmul_spmv_nuq_perchannel_batched_cuda(rows, cols, mat, vec, mul, num_rows, mat4, lookup_table);
 }
 
@@ -204,7 +204,7 @@ void vecquant3matmul_spmv_hybrid_nuq_perchannel(
   torch::Tensor mat3,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant3matmul_spmv_hybrid_nuq_perchannel_cuda(rows, cols, mat, vec, full_rows, full_row_indices, mul, num_rows, mat3, lookup_table);
 }
 void vecquant4matmul_spmv_hybrid_nuq_perchannel(
@@ -219,7 +219,7 @@ void vecquant4matmul_spmv_hybrid_nuq_perchannel(
   torch::Tensor mat4,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant4matmul_spmv_hybrid_nuq_perchannel_cuda(rows, cols, mat, vec, full_rows, full_row_indices, mul, num_rows, mat4, lookup_table);
 }
 
@@ -235,7 +235,7 @@ void vecquant3matmul_spmv_hybrid_nuq_perchannel_batched(
   torch::Tensor mat3,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant3matmul_spmv_hybrid_nuq_perchannel_batched_cuda(rows, cols, mat, vec, full_rows, full_row_indices, mul, num_rows, mat3, lookup_table);
 }
 void vecquant4matmul_spmv_hybrid_nuq_perchannel_batched(
@@ -250,7 +250,7 @@ void vecquant4matmul_spmv_hybrid_nuq_perchannel_batched(
   torch::Tensor mat4,
   torch::Tensor lookup_table
 ) {
-  const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
+  // const at::cuda::OptionalCUDAGuard device_guard(device_of(vec));
   vecquant4matmul_spmv_hybrid_nuq_perchannel_batched_cuda(rows, cols, mat, vec, full_rows, full_row_indices, mul, num_rows, mat4, lookup_table);
 }
 

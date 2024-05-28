@@ -1,0 +1,129 @@
+No CUDA runtime is found, using CUDA_HOME='/rdrive/ref/cuda/lin/cuda-12.4'
+2024-05-28 22:54:01,566 - root - INFO - running install
+/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/cmd.py:66: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+2024-05-28 22:54:01,627 - root - INFO - running bdist_egg
+2024-05-28 22:54:01,631 - root - INFO - running egg_info
+2024-05-28 22:54:01,632 - root - INFO - writing quant_cuda.egg-info/PKG-INFO
+2024-05-28 22:54:01,633 - root - INFO - writing dependency_links to quant_cuda.egg-info/dependency_links.txt
+2024-05-28 22:54:01,633 - root - INFO - writing top-level names to quant_cuda.egg-info/top_level.txt
+2024-05-28 22:54:01,665 - root - INFO - reading manifest file 'quant_cuda.egg-info/SOURCES.txt'
+2024-05-28 22:54:01,666 - root - INFO - writing manifest file 'quant_cuda.egg-info/SOURCES.txt'
+2024-05-28 22:54:01,666 - root - INFO - installing library code to build/bdist.linux-x86_64/egg
+2024-05-28 22:54:01,666 - root - INFO - running install_lib
+2024-05-28 22:54:01,666 - root - INFO - running build_ext
+2024-05-28 22:54:01,668 - root - INFO - building 'quant_cuda' extension
+Emitting ninja build file /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/temp.linux-x86_64-cpython-39/build.ninja...
+Compiling objects...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Emitting ninja build file /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/lib.linux-x86_64-cpython-39/build.ninja...
+Linking libraries...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+[1/1] /export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/bin/icpx /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/temp.linux-x86_64-cpython-39/quant_cuda.o /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/temp.linux-x86_64-cpython-39/quant_cuda_kernel.dp.o -shared -fsycl -lc10 -ltorch_cpu -ltorch -ltorch_python -L/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/torch/lib -L/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/intel_extension_for_pytorch/lib -Wl,--start-group /nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_sycl.a /nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_intel_ilp64.a /nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_sequential.a /nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_core.a -Wl,--end-group -lsycl -lOpenCL -lpthread -lm -ldl -lintel-ext-pt-gpu -o /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/lib.linux-x86_64-cpython-39/quant_cuda.cpython-39-x86_64-linux-gnu.so
+FAILED: /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/lib.linux-x86_64-cpython-39/quant_cuda.cpython-39-x86_64-linux-gnu.so 
+/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/bin/icpx /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/temp.linux-x86_64-cpython-39/quant_cuda.o /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/temp.linux-x86_64-cpython-39/quant_cuda_kernel.dp.o -shared -fsycl -lc10 -ltorch_cpu -ltorch -ltorch_python -L/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/torch/lib -L/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/intel_extension_for_pytorch/lib -Wl,--start-group /nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_sycl.a /nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_intel_ilp64.a /nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_sequential.a /nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_core.a -Wl,--end-group -lsycl -lOpenCL -lpthread -lm -ldl -lintel-ext-pt-gpu -o /export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/build/lib.linux-x86_64-cpython-39/quant_cuda.cpython-39-x86_64-linux-gnu.so
+icpx: error: no such file or directory: '/nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_sycl.a'
+icpx: error: no such file or directory: '/nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_intel_ilp64.a'
+icpx: error: no such file or directory: '/nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_sequential.a'
+icpx: error: no such file or directory: '/nfs/shm/proj/icl/cmplrarch/comp/onemkl/lin/20240509_cev_rls/lib/intel64/libmkl_core.a'
+ninja: build stopped: subcommand failed.
+Traceback (most recent call last):
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/intel_extension_for_pytorch/xpu/cpp_extension.py", line 1100, in _run_ninja_build
+    subprocess.run(
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/export/users/zhaojiam/proj/SqueezeLLM_dev/squeezellm/setup_cuda.py", line 6, in <module>
+    setup(
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/__init__.py", line 104, in setup
+    return distutils.core.setup(**attrs)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 184, in setup
+    return run_commands(dist)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 200, in run_commands
+    dist.run_commands()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+    self.run_command(cmd)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/command/install.py", line 87, in run
+    self.do_egg_install()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/command/install.py", line 139, in do_egg_install
+    self.run_command('bdist_egg')
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+    self.distribution.run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/command/bdist_egg.py", line 167, in run
+    cmd = self.call_command('install_lib', warn_dir=0)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/command/bdist_egg.py", line 153, in call_command
+    self.run_command(cmdname)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+    self.distribution.run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/command/install_lib.py", line 11, in run
+    self.build()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/command/install_lib.py", line 110, in build
+    self.run_command('build_ext')
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+    self.distribution.run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/command/build_ext.py", line 91, in run
+    _build_ext.run(self)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 359, in run
+    self.build_extensions()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/intel_extension_for_pytorch/xpu/cpp_extension.py", line 608, in build_extensions
+    build_ext.build_extensions(self)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 479, in build_extensions
+    self._build_extensions_serial()
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 505, in _build_extensions_serial
+    self.build_extension(ext)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/command/build_ext.py", line 252, in build_extension
+    _build_ext.build_extension(self, ext)
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 584, in build_extension
+    self.compiler.link_shared_object(
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/intel_extension_for_pytorch/xpu/cpp_extension.py", line 459, in unix_wrap_ninja_link_shared_object
+    _write_ninja_file_and_link_library(
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/intel_extension_for_pytorch/xpu/cpp_extension.py", line 901, in _write_ninja_file_and_link_library
+    _run_ninja_build(
+  File "/export/users/zhaojiam/pkg/miniconda3/envs/sqllm_xpu/lib/python3.9/site-packages/intel_extension_for_pytorch/xpu/cpp_extension.py", line 1117, in _run_ninja_build
+    raise RuntimeError(message) from e
+RuntimeError: Error linking libraries for extension

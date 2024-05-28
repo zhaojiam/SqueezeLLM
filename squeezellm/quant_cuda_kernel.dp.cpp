@@ -390,9 +390,9 @@ void vecquant3matmul_spmv_nuq_perchannel_cuda(
     dpct::get_in_order_queue().submit([&](sycl::handler &cgh) {
       const int *rows_data_int_ct0 = rows.data<int>();
       const int *cols_data_int_ct1 = cols.data<int>();
-      const double *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
-      const double *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
-      double *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
+      const scalar_t *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
+      const scalar_t *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
+      scalar_t *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
 
       cgh.parallel_for(sycl::nd_range<3>(sycl::range<3>(1, 1, num_blocks) *
                                              sycl::range<3>(1, 1, block_size),
@@ -481,9 +481,9 @@ void vecquant4matmul_spmv_nuq_perchannel_cuda(
     dpct::get_in_order_queue().submit([&](sycl::handler &cgh) {
       const int *rows_data_int_ct0 = rows.data<int>();
       const int *cols_data_int_ct1 = cols.data<int>();
-      const double *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
-      const double *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
-      double *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
+      const scalar_t *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
+      const scalar_t *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
+      scalar_t *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
 
       cgh.parallel_for(sycl::nd_range<3>(sycl::range<3>(1, 1, num_blocks) *
                                              sycl::range<3>(1, 1, block_size),
@@ -613,9 +613,9 @@ void vecquant3matmul_spmv_nuq_perchannel_batched_cuda(
     dpct::get_in_order_queue().submit([&](sycl::handler &cgh) {
       const int *rows_data_int_ct0 = rows.data<int>();
       const int *cols_data_int_ct1 = cols.data<int>();
-      const double *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
-      const double *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
-      double *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
+      const scalar_t *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
+      const scalar_t *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
+      scalar_t *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
 
       cgh.parallel_for(sycl::nd_range<3>(sycl::range<3>(1, 1, num_blocks) *
                                              sycl::range<3>(1, 1, block_size),
@@ -710,9 +710,9 @@ void vecquant4matmul_spmv_nuq_perchannel_batched_cuda(
     dpct::get_in_order_queue().submit([&](sycl::handler &cgh) {
       const int *rows_data_int_ct0 = rows.data<int>();
       const int *cols_data_int_ct1 = cols.data<int>();
-      const double *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
-      const double *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
-      double *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
+      const scalar_t *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
+      const scalar_t *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
+      scalar_t *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
 
       cgh.parallel_for(sycl::nd_range<3>(sycl::range<3>(1, 1, num_blocks) *
                                              sycl::range<3>(1, 1, block_size),
@@ -802,9 +802,9 @@ void vecquant3matmul_spmv_hybrid_nuq_perchannel_cuda(
     dpct::get_in_order_queue().submit([&](sycl::handler &cgh) {
       const int *rows_data_int_ct0 = rows.data<int>();
       const int *cols_data_int_ct1 = cols.data<int>();
-      const double *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
-      const double *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
-      double *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
+      const scalar_t *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
+      const scalar_t *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
+      scalar_t *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
 
       cgh.parallel_for(sycl::nd_range<3>(sycl::range<3>(1, 1, num_blocks) *
                                              sycl::range<3>(1, 1, block_size),
@@ -928,9 +928,9 @@ void vecquant4matmul_spmv_hybrid_nuq_perchannel_cuda(
     dpct::get_in_order_queue().submit([&](sycl::handler &cgh) {
       const int *rows_data_int_ct0 = rows.data<int>();
       const int *cols_data_int_ct1 = cols.data<int>();
-      const double *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
-      const double *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
-      double *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
+      const scalar_t *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
+      const scalar_t *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
+      scalar_t *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
 
       cgh.parallel_for(sycl::nd_range<3>(sycl::range<3>(1, 1, num_blocks) *
                                              sycl::range<3>(1, 1, block_size),
@@ -1056,9 +1056,9 @@ void vecquant3matmul_spmv_hybrid_nuq_perchannel_batched_cuda(
     dpct::get_in_order_queue().submit([&](sycl::handler &cgh) {
       const int *rows_data_int_ct0 = rows.data<int>();
       const int *cols_data_int_ct1 = cols.data<int>();
-      const double *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
-      const double *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
-      double *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
+      const scalar_t *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
+      const scalar_t *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
+      scalar_t *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
 
       cgh.parallel_for(sycl::nd_range<3>(sycl::range<3>(1, 1, num_blocks) *
                                              sycl::range<3>(1, 1, block_size),
@@ -1188,9 +1188,9 @@ void vecquant4matmul_spmv_hybrid_nuq_perchannel_batched_cuda(
     dpct::get_in_order_queue().submit([&](sycl::handler &cgh) {
       const int *rows_data_int_ct0 = rows.data<int>();
       const int *cols_data_int_ct1 = cols.data<int>();
-      const double *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
-      const double *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
-      double *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
+      const scalar_t *mat_data_scalar_t_ct2 = mat.data<scalar_t>();
+      const scalar_t *vec_data_scalar_t_ct3 = vec.data<scalar_t>();
+      scalar_t *mul_data_scalar_t_ct4 = mul.data<scalar_t>();
 
       cgh.parallel_for(sycl::nd_range<3>(sycl::range<3>(1, 1, num_blocks) *
                                              sycl::range<3>(1, 1, block_size),

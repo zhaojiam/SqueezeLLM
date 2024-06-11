@@ -3,6 +3,8 @@ import time
 import torch
 import torch.nn as nn
 
+import intel_extension_for_pytorch as ipex;
+
 from squeezellm.modelutils import *
 from squeezellm.quant import *
 
@@ -78,7 +80,8 @@ def llama_eval(model, testenc, dev):
     layers[0] = layers[0].cpu()
     for i in range(len(embeddings)):
         embeddings[i] = embeddings[i].cpu()
-    torch.cuda.empty_cache()
+    #torch.cuda.empty_cache()
+    torch.xpu.empty_cache()
 
     outs = torch.zeros_like(inps)
     attention_mask = cache["attention_mask"]
@@ -103,7 +106,8 @@ def llama_eval(model, testenc, dev):
                 )[0]
         layers[i] = layer.cpu()
         del layer
-        torch.cuda.empty_cache()
+        #torch.cuda.empty_cache()
+        torch.xpu.empty_cache()
         inps, outs = outs, inps
 
     norm = get_norm(model, model_type)
@@ -192,7 +196,8 @@ def benchmark(model, input_ids, check=False):
     layers = get_layers(model, model_type)
 
     input_ids = input_ids.to(model.gpus[0] if hasattr(model, "gpus") else DEV)
-    torch.cuda.synchronize()
+    #torch.cuda.synchronize()
+    torch.xpu.synchronize()
 
     cache = {"past": None}
 
@@ -215,9 +220,11 @@ def benchmark(model, input_ids, check=False):
     def sync():
         if hasattr(model, "gpus"):
             for gpu in model.gpus:
-                torch.cuda.synchronize(gpu)
+                #torch.cuda.synchronize(gpu)
+                torch.xpu.synchronize()
         else:
-            torch.cuda.synchronize()
+            #torch.cuda.synchronize()
+            torch.xpu.synchronize()
 
     max_memory = 0
     with torch.no_grad():
@@ -233,7 +240,8 @@ def benchmark(model, input_ids, check=False):
             sync()
             times.append(time.time() - tick)
             print(i, times[-1])
-            max_memory = max(max_memory, torch.cuda.memory_allocated() / 1024 / 1024)
+            #max_memory = max(max_memory, torch.cuda.memory_allocated() / 1024 / 1024)
+            max_memory = max(max_memory,0)
             if check and i != input_ids.numel() - 1:
                 tot += loss(
                     out.logits[0].to(DEV), input_ids[:, (i + 1)].to(DEV)
@@ -252,6 +260,10 @@ def benchmark(model, input_ids, check=False):
 if __name__ == "__main__":
     import argparse
     from squeezellm.datautils import *
+
+    print(torch.__version__)
+    print(ipex.__version__)
+    [print(f'[{i}]: {torch.xpu.get_device_properties(i)}') for i in range(torch.xpu.device_count())]
 
     parser = argparse.ArgumentParser()
 

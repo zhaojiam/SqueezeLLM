@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import math
 import quant_cuda
+import intel_extension_for_pytorch as ipex
 
 
 def round_to_nearest_pole_sim(w, poles):
@@ -215,7 +216,7 @@ class QuantLinearLUT(nn.Module):
                 y = self.bias.clone()
                 outshape[-1] = self.bias.numel()
             else:
-                y = torch.zeros((self.outfeatures), device="cuda", dtype=torch.float32)
+                y = torch.zeros((self.outfeatures), device="xpu", dtype=torch.float32)
                 outshape[-1] = self.outfeatures
             dtype = x.dtype
 
@@ -314,7 +315,7 @@ class QuantLinearLUT(nn.Module):
             out_shape = x.shape[:-1] + (self.outfeatures,)
             x = x.reshape(-1, x.shape[-1])
             out = torch.zeros(
-                (x.shape[0], self.outfeatures), device="cuda", dtype=torch.float32
+                (x.shape[0], self.outfeatures), device="xpu", dtype=torch.float32
             )
             dtype = x.dtype
             if self.bits == 3:

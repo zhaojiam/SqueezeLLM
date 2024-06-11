@@ -305,7 +305,8 @@ if __name__ == "__main__":
         help="Number of dense channel used for hybrid kernel.",
     )
 
-    DEV = torch.device("cuda:0")
+    # DEV = torch.device("cuda:0")
+    DEV = torch.device("xpu")
 
     args = parser.parse_args()
 

@@ -241,7 +241,8 @@ def benchmark(model, input_ids, check=False):
             times.append(time.time() - tick)
             print(i, times[-1])
             #max_memory = max(max_memory, torch.cuda.memory_allocated() / 1024 / 1024)
-            max_memory = max(max_memory,0)
+            max_memory = max(max_memory, torch.xpu.memory_allocated() / 1024 / 1024)
+            #max_memory = max(max_memory,0)
             if check and i != input_ids.numel() - 1:
                 tot += loss(
                     out.logits[0].to(DEV), input_ids[:, (i + 1)].to(DEV)
@@ -357,12 +358,13 @@ if __name__ == "__main__":
                 with torch.profiler.profile(
                     activities=[
                         torch.profiler.ProfilerActivity.CPU,
-                        torch.profiler.ProfilerActivity.CUDA,
+                        torch.profiler.ProfilerActivity.XPU,
                     ]
                 ) as p:
                     benchmark(model, input_ids, check=args.check)
                 print(
-                    p.key_averages().table(sort_by="self_cuda_time_total", row_limit=-1)
+                    #p.key_averages().table(sort_by="self_cuda_time_total", row_limit=-1)
+                    p.key_averages().table()
                 )
             else:
                 benchmark(model, input_ids, check=args.check)

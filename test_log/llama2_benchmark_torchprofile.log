@@ -1,0 +1,399 @@
+No CUDA runtime is found, using CUDA_HOME='/rdrive/ref/cuda/lin/cuda-12.4'
+2024-06-24 21:09:29,414 - datasets - INFO - PyTorch version 2.1.0.post2+cxx11.abi available.
+STAGE:2024-06-24 21:09:54 1003640:1003640 XPUActivityProfilerController.cpp:271] Completed Stage: Warm Up
+[W collection.cpp:353] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: torch::profiler::impl::ThreadLocalSubqueue::begin_op(at::RecordFunction const&) + 0x4da (0x7f42908782aa in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0x43d2706 (0x7f42900fe706 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::runStartCallbacks() + 0x4b (0x7f428d2faf2b in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x211e89a (0x7f428de4a89a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::to_dtype_layout::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x346 (0x7f428ddd2b16 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x3ddac9 (0x7f42a107aac9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #10: <unknown function> + 0x3fc81c (0x7f42a109981c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #11: python() [0x4f9b46]
+<omitting python frames>
+frame #13: python() [0x4e69da]
+frame #16: python() [0x4e69da]
+frame #19: python() [0x4e69da]
+frame #23: python() [0x5c1157]
+frame #24: python() [0x5bd170]
+frame #25: python() [0x456423]
+frame #29: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #30: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #31: python() [0x58784e]
+
+[W collection.cpp:353] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: torch::profiler::impl::ThreadLocalSubqueue::begin_op(at::RecordFunction const&) + 0x4da (0x7f42908782aa in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0x43d2706 (0x7f42900fe706 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::runStartCallbacks() + 0x4b (0x7f428d2faf2b in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x1fb9542 (0x7f428dce5542 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::_to_copy::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x31a (0x7f428dc5b96a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: at::native::to(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x104 (0x7f428d73b0c4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: <unknown function> + 0x2820223 (0x7f428e54c223 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: <unknown function> + 0x211e870 (0x7f428de4a870 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: at::_ops::to_dtype_layout::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x346 (0x7f428ddd2b16 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x3ddac9 (0x7f42a107aac9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #14: <unknown function> + 0x3fc81c (0x7f42a109981c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #15: python() [0x4f9b46]
+<omitting python frames>
+frame #17: python() [0x4e69da]
+frame #20: python() [0x4e69da]
+frame #23: python() [0x4e69da]
+frame #27: python() [0x5c1157]
+frame #28: python() [0x5bd170]
+frame #29: python() [0x456423]
+frame #33: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #34: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #35: python() [0x58784e]
+
+[W collection.cpp:353] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: torch::profiler::impl::ThreadLocalSubqueue::begin_op(at::RecordFunction const&) + 0x4da (0x7f42908782aa in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0x43d2706 (0x7f42900fe706 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::runStartCallbacks() + 0x4b (0x7f428d2faf2b in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x228aec5 (0x7f428dfb6ec5 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::empty_strided::call(c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x51d (0x7f428df2f09d in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x1712fa0 (0x7f428d43efa0 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::_to_copy(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x1484 (0x7f428d746c14 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: <unknown function> + 0x269ccbd (0x7f428e3c8cbd in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0xf8 (0x7f428dbbbc98 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x25054e1 (0x7f428e2314e1 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0xf8 (0x7f428dbbbc98 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x39f5e15 (0x7f428f721e15 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x39f6330 (0x7f428f722330 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x1fb9514 (0x7f428dce5514 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: at::_ops::_to_copy::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x31a (0x7f428dc5b96a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: at::native::to(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x104 (0x7f428d73b0c4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x2820223 (0x7f428e54c223 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: <unknown function> + 0x211e870 (0x7f428de4a870 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: at::_ops::to_dtype_layout::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x346 (0x7f428ddd2b16 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #23: <unknown function> + 0x3ddac9 (0x7f42a107aac9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #24: <unknown function> + 0x3fc81c (0x7f42a109981c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #25: python() [0x4f9b46]
+<omitting python frames>
+frame #27: python() [0x4e69da]
+frame #30: python() [0x4e69da]
+frame #33: python() [0x4e69da]
+frame #37: python() [0x5c1157]
+frame #38: python() [0x5bd170]
+frame #39: python() [0x456423]
+frame #43: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #44: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #45: python() [0x58784e]
+
+[W profiler_kineto.cpp:448] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x43d2602 (0x7f42900fe602 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: at::RecordFunction::end() + 0x4a (0x7f428d2fb00a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::~RecordFunction() + 0x24 (0x7f428d2fb064 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x228aea2 (0x7f428dfb6ea2 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::empty_strided::call(c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x51d (0x7f428df2f09d in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x1712fa0 (0x7f428d43efa0 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::_to_copy(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x1484 (0x7f428d746c14 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: <unknown function> + 0x269ccbd (0x7f428e3c8cbd in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0xf8 (0x7f428dbbbc98 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x25054e1 (0x7f428e2314e1 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0xf8 (0x7f428dbbbc98 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x39f5e15 (0x7f428f721e15 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x39f6330 (0x7f428f722330 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x1fb9514 (0x7f428dce5514 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: at::_ops::_to_copy::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x31a (0x7f428dc5b96a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: at::native::to(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x104 (0x7f428d73b0c4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x2820223 (0x7f428e54c223 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: <unknown function> + 0x211e870 (0x7f428de4a870 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: at::_ops::to_dtype_layout::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x346 (0x7f428ddd2b16 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #23: <unknown function> + 0x3ddac9 (0x7f42a107aac9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #24: <unknown function> + 0x3fc81c (0x7f42a109981c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #25: python() [0x4f9b46]
+<omitting python frames>
+frame #27: python() [0x4e69da]
+frame #30: python() [0x4e69da]
+frame #33: python() [0x4e69da]
+frame #37: python() [0x5c1157]
+frame #38: python() [0x5bd170]
+frame #39: python() [0x456423]
+frame #43: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #44: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #45: python() [0x58784e]
+
+[W collection.cpp:353] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: torch::profiler::impl::ThreadLocalSubqueue::begin_op(at::RecordFunction const&) + 0x4da (0x7f42908782aa in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0x43d2706 (0x7f42900fe706 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::runStartCallbacks() + 0x4b (0x7f428d2faf2b in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x1fb6f6b (0x7f428dce2f6b in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::copy_::call(at::Tensor&, at::Tensor const&, bool) + 0x2cf (0x7f428e08803f in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: at::native::_to_copy(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x14b7 (0x7f428d746c47 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: <unknown function> + 0x269ccbd (0x7f428e3c8cbd in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0xf8 (0x7f428dbbbc98 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x25054e1 (0x7f428e2314e1 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0xf8 (0x7f428dbbbc98 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x39f5e15 (0x7f428f721e15 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x39f6330 (0x7f428f722330 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x1fb9514 (0x7f428dce5514 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: at::_ops::_to_copy::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x31a (0x7f428dc5b96a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: at::native::to(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x104 (0x7f428d73b0c4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0x2820223 (0x7f428e54c223 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x211e870 (0x7f428de4a870 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: at::_ops::to_dtype_layout::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x346 (0x7f428ddd2b16 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: <unknown function> + 0x3ddac9 (0x7f42a107aac9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #23: <unknown function> + 0x3fc81c (0x7f42a109981c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #24: python() [0x4f9b46]
+<omitting python frames>
+frame #26: python() [0x4e69da]
+frame #29: python() [0x4e69da]
+frame #32: python() [0x4e69da]
+frame #36: python() [0x5c1157]
+frame #37: python() [0x5bd170]
+frame #38: python() [0x456423]
+frame #42: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #43: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #44: python() [0x58784e]
+
+[W profiler_kineto.cpp:448] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x43d2602 (0x7f42900fe602 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: at::RecordFunction::end() + 0x4a (0x7f428d2fb00a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::~RecordFunction() + 0x24 (0x7f428d2fb064 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x1fb6faf (0x7f428dce2faf in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::copy_::call(at::Tensor&, at::Tensor const&, bool) + 0x2cf (0x7f428e08803f in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: at::native::_to_copy(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x14b7 (0x7f428d746c47 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: <unknown function> + 0x269ccbd (0x7f428e3c8cbd in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0xf8 (0x7f428dbbbc98 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x25054e1 (0x7f428e2314e1 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: at::_ops::_to_copy::redispatch(c10::DispatchKeySet, at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0xf8 (0x7f428dbbbc98 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x39f5e15 (0x7f428f721e15 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x39f6330 (0x7f428f722330 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x1fb9514 (0x7f428dce5514 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: at::_ops::_to_copy::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x31a (0x7f428dc5b96a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: at::native::to(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x104 (0x7f428d73b0c4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0x2820223 (0x7f428e54c223 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x211e870 (0x7f428de4a870 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: at::_ops::to_dtype_layout::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x346 (0x7f428ddd2b16 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: <unknown function> + 0x3ddac9 (0x7f42a107aac9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #23: <unknown function> + 0x3fc81c (0x7f42a109981c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #24: python() [0x4f9b46]
+<omitting python frames>
+frame #26: python() [0x4e69da]
+frame #29: python() [0x4e69da]
+frame #32: python() [0x4e69da]
+frame #36: python() [0x5c1157]
+frame #37: python() [0x5bd170]
+frame #38: python() [0x456423]
+frame #42: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #43: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #44: python() [0x58784e]
+
+[W profiler_kineto.cpp:448] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x43d2602 (0x7f42900fe602 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: at::RecordFunction::end() + 0x4a (0x7f428d2fb00a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::~RecordFunction() + 0x24 (0x7f428d2fb064 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x1fb9520 (0x7f428dce5520 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::_to_copy::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, c10::optional<c10::MemoryFormat>) + 0x31a (0x7f428dc5b96a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: at::native::to(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x104 (0x7f428d73b0c4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: <unknown function> + 0x2820223 (0x7f428e54c223 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: <unknown function> + 0x211e870 (0x7f428de4a870 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: at::_ops::to_dtype_layout::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x346 (0x7f428ddd2b16 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x3ddac9 (0x7f42a107aac9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #14: <unknown function> + 0x3fc81c (0x7f42a109981c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #15: python() [0x4f9b46]
+<omitting python frames>
+frame #17: python() [0x4e69da]
+frame #20: python() [0x4e69da]
+frame #23: python() [0x4e69da]
+frame #27: python() [0x5c1157]
+frame #28: python() [0x5bd170]
+frame #29: python() [0x456423]
+frame #33: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #34: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #35: python() [0x58784e]
+
+[W profiler_kineto.cpp:448] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x43d2602 (0x7f42900fe602 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: at::RecordFunction::end() + 0x4a (0x7f428d2fb00a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::~RecordFunction() + 0x24 (0x7f428d2fb064 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x211e87c (0x7f428de4a87c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::to_dtype_layout::call(at::Tensor const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, bool, bool, c10::optional<c10::MemoryFormat>) + 0x346 (0x7f428ddd2b16 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x3ddac9 (0x7f42a107aac9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #10: <unknown function> + 0x3fc81c (0x7f42a109981c in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #11: python() [0x4f9b46]
+<omitting python frames>
+frame #13: python() [0x4e69da]
+frame #16: python() [0x4e69da]
+frame #19: python() [0x4e69da]
+frame #23: python() [0x5c1157]
+frame #24: python() [0x5bd170]
+frame #25: python() [0x456423]
+frame #29: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #30: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #31: python() [0x58784e]
+
+[W collection.cpp:353] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: torch::profiler::impl::ThreadLocalSubqueue::begin_op(at::RecordFunction const&) + 0x4da (0x7f42908782aa in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0x43d2706 (0x7f42900fe706 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::runStartCallbacks() + 0x4b (0x7f428d2faf2b in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x1fa7cf2 (0x7f428dcd3cf2 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::ones::call(c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x4b0 (0x7f428ddc4690 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x4d6790 (0x7f42a1173790 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #10: python() [0x507397]
+<omitting python frames>
+frame #13: python() [0x4e69da]
+frame #16: python() [0x4e69da]
+frame #19: python() [0x4e69da]
+frame #23: python() [0x5c1157]
+frame #24: python() [0x5bd170]
+frame #25: python() [0x456423]
+frame #29: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #30: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #31: python() [0x58784e]
+
+[W collection.cpp:353] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: torch::profiler::impl::ThreadLocalSubqueue::begin_op(at::RecordFunction const&) + 0x4da (0x7f42908782aa in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0x43d2706 (0x7f42900fe706 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::runStartCallbacks() + 0x4b (0x7f428d2faf2b in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x228884d (0x7f428dfb484d in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::empty_memory_format::call(c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, c10::optional<c10::MemoryFormat>) + 0x4d9 (0x7f428df2cc69 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x141bb91 (0x7f428d147b91 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::full(c10::ArrayRef<long>, c10::Scalar const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x134 (0x7f428d76b684 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: at::native::ones(c10::ArrayRef<long>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x4e (0x7f428d76b74e in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x26b1614 (0x7f428e3dd614 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: at::_ops::ones::redispatch(c10::DispatchKeySet, c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0xe5 (0x7f428dd737e5 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x2507b45 (0x7f428e233b45 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x1fa7cc0 (0x7f428dcd3cc0 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: at::_ops::ones::call(c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x4b0 (0x7f428ddc4690 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4d6790 (0x7f42a1173790 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #18: python() [0x507397]
+<omitting python frames>
+frame #21: python() [0x4e69da]
+frame #24: python() [0x4e69da]
+frame #27: python() [0x4e69da]
+frame #31: python() [0x5c1157]
+frame #32: python() [0x5bd170]
+frame #33: python() [0x456423]
+frame #37: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: python() [0x58784e]
+
+[W profiler_kineto.cpp:448] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x43d2602 (0x7f42900fe602 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: at::RecordFunction::end() + 0x4a (0x7f428d2fb00a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::~RecordFunction() + 0x24 (0x7f428d2fb064 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x2288827 (0x7f428dfb4827 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::empty_memory_format::call(c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>, c10::optional<c10::MemoryFormat>) + 0x4d9 (0x7f428df2cc69 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x141bb91 (0x7f428d147b91 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::full(c10::ArrayRef<long>, c10::Scalar const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x134 (0x7f428d76b684 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: at::native::ones(c10::ArrayRef<long>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x4e (0x7f428d76b74e in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x26b1614 (0x7f428e3dd614 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: at::_ops::ones::redispatch(c10::DispatchKeySet, c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0xe5 (0x7f428dd737e5 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x2507b45 (0x7f428e233b45 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x1fa7cc0 (0x7f428dcd3cc0 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: at::_ops::ones::call(c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x4b0 (0x7f428ddc4690 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4d6790 (0x7f42a1173790 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #18: python() [0x507397]
+<omitting python frames>
+frame #21: python() [0x4e69da]
+frame #24: python() [0x4e69da]
+frame #27: python() [0x4e69da]
+frame #31: python() [0x5c1157]
+frame #32: python() [0x5bd170]
+frame #33: python() [0x456423]
+frame #37: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: python() [0x58784e]
+
+[W collection.cpp:353] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: torch::profiler::impl::ThreadLocalSubqueue::begin_op(at::RecordFunction const&) + 0x4da (0x7f42908782aa in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0x43d2706 (0x7f42900fe706 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::runStartCallbacks() + 0x4b (0x7f428d2faf2b in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x1f96f90 (0x7f428dcc2f90 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::fill__Scalar::call(at::Tensor&, c10::Scalar const&) + 0x259 (0x7f428dc337b9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: at::native::full(c10::ArrayRef<long>, c10::Scalar const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x13f (0x7f428d76b68f in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::ones(c10::ArrayRef<long>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x4e (0x7f428d76b74e in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: <unknown function> + 0x26b1614 (0x7f428e3dd614 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: at::_ops::ones::redispatch(c10::DispatchKeySet, c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0xe5 (0x7f428dd737e5 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x2507b45 (0x7f428e233b45 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x1fa7cc0 (0x7f428dcd3cc0 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: at::_ops::ones::call(c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x4b0 (0x7f428ddc4690 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x4d6790 (0x7f42a1173790 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #17: python() [0x507397]
+<omitting python frames>
+frame #20: python() [0x4e69da]
+frame #23: python() [0x4e69da]
+frame #26: python() [0x4e69da]
+frame #30: python() [0x5c1157]
+frame #31: python() [0x5bd170]
+frame #32: python() [0x456423]
+frame #36: <unknown function> + 0x29d90 (0x7f42a26e7d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #37: __libc_start_main + 0x80 (0x7f42a26e7e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: python() [0x58784e]
+
+[W profiler_kineto.cpp:448] Failed to record CUDA event. CUDA used in profiler but not enabled.
+Exception raised from fail at /build/pytorch/torch/csrc/profiler/stubs/base.cpp:49 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f428bcd9a89 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7f428bc931d4 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x4b7fd07 (0x7f42908abd07 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x4b7fe09 (0x7f42908abe09 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x43d2602 (0x7f42900fe602 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: at::RecordFunction::end() + 0x4a (0x7f428d2fb00a in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: at::RecordFunction::~RecordFunction() + 0x24 (0x7f428d2fb064 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0x1f96fc5 (0x7f428dcc2fc5 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: at::_ops::fill__Scalar::call(at::Tensor&, c10::Scalar const&) + 0x259 (0x7f428dc337b9 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: at::native::full(c10::ArrayRef<long>, c10::Scalar const&, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x13f (0x7f428d76b68f in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::ones(c10::ArrayRef<long>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0x4e (0x7f428d76b74e in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: <unknown function> + 0x26b1614 (0x7f428e3dd614 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: at::_ops::ones::redispatch(c10::DispatchKeySet, c10::ArrayRef<c10::SymInt>, c10::optional<c10::ScalarType>, c10::optional<c10::Layout>, c10::optional<c10::Device>, c10::optional<bool>) + 0xe5 (0x7f428dd737e5 in /netbatch/sqllm_sycl_preliminary/miniconda3/envs/sqllm/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)

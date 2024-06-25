@@ -2,6 +2,8 @@ import time
 
 import torch
 import torch.nn as nn
+import intel_extension_for_pytorch
+import model_convert
 
 from squeezellm.modelutils import *
 from squeezellm.quant import *
